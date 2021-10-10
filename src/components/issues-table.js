@@ -29,7 +29,7 @@ export default function IssuesTable({ issues }) {
 								</TableCell>
 								<TableCell align='right'>{issue.title}</TableCell>
 								<TableCell align='right'>
-									<a href={issue.link} target='_blank'>
+									<a href={issue.link} target='_blank' rel='noreferrer'>
 										{issue.link}
 									</a>
 								</TableCell>
