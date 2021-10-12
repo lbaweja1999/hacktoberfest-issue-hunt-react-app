@@ -55,7 +55,7 @@ export default function Home() {
 					justifyContent='center'>
 					<InputField
 						id='outlined-basic'
-						label='Enter labels first timers only, help wanted, good first issues, etc..'
+						label='Enter labels'
 						variant='outlined'
 						color='error'
 						value={label}
@@ -63,7 +63,7 @@ export default function Home() {
 					/>
 					<InputField
 						id='outlined-basic'
-						label='Enter language JS,Java,Go etc..'
+						label='Enter language'
 						variant='outlined'
 						value={language}
 						color='error'
