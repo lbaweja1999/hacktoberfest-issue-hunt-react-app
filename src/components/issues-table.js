@@ -7,6 +7,9 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
@@ -56,7 +59,19 @@ export default function IssuesTable({ issues }) {
 										{issue.title}
 									</a>
 								</StyledTableCell>
-								<StyledTableCell>{issue.labels}</StyledTableCell>
+								<StyledTableCell>
+									{' '}
+									<List
+										sx={{
+											maxWidth: 100,
+										}}>
+										{issue.labels?.map((label) => (
+											<ListItem key={label} disableGutters>
+												<ListItemText primary={label} />
+											</ListItem>
+										))}
+									</List>
+								</StyledTableCell>
 								<StyledTableCell>{issue.createdAt}</StyledTableCell>
 								<StyledTableCell>{issue.state}</StyledTableCell>
 
