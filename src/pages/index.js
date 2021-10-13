@@ -83,7 +83,9 @@ export default function Home() {
 			{!load ? (
 				<div style={{ marginTop: '1%', paddingTop: '1%' }}>
 					{issues?.length > 0 ? (
-						<IssuesTable issues={issues} />
+						<div style={{ marginLeft: '5%', marginRight: '5%' }}>
+							<IssuesTable issues={issues} />
+						</div>
 					) : (
 						<div>
 							<Heading variant='h2' align='center'>
